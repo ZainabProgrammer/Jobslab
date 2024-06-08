@@ -1,5 +1,5 @@
 import React from "react";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import { TbChecklist } from "react-icons/tb";
 import { MdLocationOn } from "react-icons/md";
 import { Link } from "react-router-dom";
@@ -10,7 +10,7 @@ const AllCandidates = ({
   setselectCate,
   setselectExp,
 }) => {
-  const state = useSelector((state) => state.candidates.candidates);
+  // const state = useSelector((state) => state.candidates.candidates);
 
   const handleClear = () => {
     setselectLocation("");
@@ -39,7 +39,11 @@ const AllCandidates = ({
                     </div>
                     <div className="d-md-flex aling-items-center justify-content-between">
                       <div className="d-md-flex align-items-center gap-5 ">
-                        <img src={e.image} style={{ width: "6rem" }} />
+                        <img
+                          src={e.image}
+                          style={{ width: "6rem" }}
+                          alt="img"
+                        />
 
                         <div>
                           <p className="mb-0 mt-3 mt-md-0">{e.role}</p>

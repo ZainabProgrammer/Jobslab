@@ -46,7 +46,7 @@ const Fixed_img = ({
     }
     return false;
   });
-  console.log(selectedCandiCate, "selcted");
+
   return (
     <div>
       <div className="fixed-img"></div>

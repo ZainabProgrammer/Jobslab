@@ -67,15 +67,12 @@ const Signup = () => {
           password
         );
 
-        console.log(userCredential.user, "user");
         setuser(userCredential.user);
         dispatch(getUsers(userCredential.user));
 
         onAuthStateChanged(auth, (user) => {
           if (user) {
-            console.log("User is signed in:", user.displayName);
           } else {
-            console.log("User is signed out");
           }
         });
 
@@ -89,13 +86,12 @@ const Signup = () => {
         if (errorCode.includes("auth/weak-password")) {
           setpasswordLengErr("Password should be atleast 6 character long");
         }
-        console.log(error.message);
+
         seterror(error.message);
       }
     }
   };
 
-  console.log(user, "user");
   return (
     <>
       <section

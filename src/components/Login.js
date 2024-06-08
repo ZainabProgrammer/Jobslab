@@ -9,7 +9,6 @@ import { getUsers } from "../features/JobSlice";
 import { Dispatch } from "react";
 const Login = () => {
   const users = useSelector((state) => state.jobs.users);
-  console.log(users, "users from login");
   const [userErr, setuserErr] = useState("");
   const [user, setuser] = useState("");
 

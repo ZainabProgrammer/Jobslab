@@ -4,7 +4,6 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 const Categories = () => {
   const state = useSelector((state) => state.jobs.data);
-  console.log(state, "from home");
   const uniqueCategories = new Set();
 
   // Filter out duplicates and add only unique categories to the array
@@ -43,6 +42,7 @@ const Categories = () => {
                       src={e.image}
                       className="w-100 cat-img"
                       style={{ height: "18rem" }}
+                      alt="category"
                     />
                     <div
                       class="caption  cat-text p-2"

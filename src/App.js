@@ -94,7 +94,6 @@ function App() {
     bringCandidates();
   }, [dispatch]);
 
-  console.log(candidates, "candidates");
   const [selectCate, setselectCate] = useState("");
   const [selectCompany, setselectCompany] = useState("");
   const [selectLocation, setselectLocation] = useState("");

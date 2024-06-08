@@ -11,14 +11,13 @@ const Job_des = () => {
   // const selectedOne = useSelector((state) => state.jobs.selectedJob);
   const allJobs = useSelector((state) => state.jobs.data);
   const job_id = allJobs.filter((e) => e.id === id);
-  console.log(job_id, "job_id");
-  // console.log(selectedOne, "one cate");
+
   useEffect(() => {
     const fetchJobDescription = async () => {
       const jobDescription = await fetchJobsData(); // Replace this with your actual function to fetch data from Firebase.
       dispatch(selectedJobReducer(jobDescription));
     };
-    console.log(id, "id");
+
     fetchJobDescription();
     window.scrollTo(0, 0);
   }, [job_id, dispatch]);

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import { TypeAnimation } from "react-type-animation";
 const Home = ({
@@ -24,11 +24,12 @@ const Home = ({
       <div className=" home d-flex container justify-content-between">
         <div className="col banner ">
           {/* <PiTriangleFill className="triangle" /> */}{" "}
-          <img src="/assets/back.png" className="triangle" />
+          <img src="/assets/back.png" className="triangle" alt="bean-bag" />
           <img
-            src="http://reactjob.codebasket.xyz/assets/img/banner/banner-21.png"
+            src="/assets/personWithLaptop.png"
             style={{ width: "25rem", objectFit: "cover" }}
             className="boy-img"
+            alt="boy"
           />
         </div>
         <div className="col-md-5 description ">
@@ -44,9 +45,7 @@ const Home = ({
                     2000, // Waits 2s
                     " benefits", // Types 'Three' without deleting 'Two'
                     2000,
-                    () => {
-                      console.log("Sequence completed");
-                    },
+                    () => {},
                   ]}
                   wrapper="span"
                   cursor={true}

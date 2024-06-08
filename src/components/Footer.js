@@ -10,8 +10,9 @@ const Footer = () => {
               <div style={{ position: "relative" }}>
                 <div data-aos="fade-up">
                   <img
-                    src="http://reactjob.codebasket.xyz/assets/img/logo/logowhite.png"
+                    src="/assets/jobsLogo.png"
                     style={{ width: "200px", objectFit: "cover" }}
+                    alt="logo"
                   />
                 </div>
               </div>

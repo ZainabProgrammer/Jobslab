@@ -14,7 +14,7 @@ const Profile = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
   const state = useSelector((state) => state.candidates.candidates);
-  console.log(state, "prof");
+
   const cand_id = state.filter((e) => e.id === id);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ const Profile = () => {
     bringCandidates();
     window.scrollTo(0, 0);
   }, [dispatch, cand_id]);
-  console.log(id, "id");
+
   if (!cand_id) {
     return (
       <>

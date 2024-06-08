@@ -23,7 +23,6 @@ export const fetchCandidates = async () => {
     const colRef = collection(db, "candidates");
     const querySnapshot = await getDocs(colRef);
     const candsData = querySnapshot.docs.map((doc) => doc.data());
-    console.log(candsData, "cands");
     return candsData;
   } catch (error) {
     console.error("Error fetching Firestore data:", error.message);

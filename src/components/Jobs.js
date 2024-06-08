@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 
 const Jobs = ({ selectedJob, setselectTitle, setselectCategory }) => {
   const state = useSelector((state) => state.jobs);
-  console.log(state, "jobs");
 
   const [activeButton, setActiveButton] = useState(0);
   const [jobType, setjobType] = useState("");
@@ -34,8 +33,6 @@ const Jobs = ({ selectedJob, setselectTitle, setselectCategory }) => {
     }
     return job.type.toLowerCase().includes(jobType.toLowerCase());
   });
-
-  console.log(selectedType, "type");
 
   return (
     <div className="container-fluid my-5 pt-5 " id="jobs">

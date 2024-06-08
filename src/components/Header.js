@@ -23,23 +23,20 @@ const Header = () => {
   const user = auth.currentUser;
   useEffect(() => {
     user && setcurrentUser(user && user.email);
+    //eslint-disable-next-line
   }, []);
   let name =
     currentUser &&
     currentUser
       .replace(currentUser.charAt(0), currentUser.charAt(0).toUpperCase())
       .slice(0, 1);
-  console.log(name, "han");
 
   const handleLogOut = () => {
     deleteUser(user)
       .then(() => {
-        console.log("user deleted");
         setcurrentUser(null);
       })
-      .catch((error) => {
-        console.log("error in deleting", error);
-      });
+      .catch((error) => {});
   };
   const handleEnter = () => {
     setmenu(true);
@@ -139,8 +136,9 @@ const Header = () => {
         <Link to="/">
           <div style={{ position: "relative" }}>
             <img
-              src="http://reactjob.codebasket.xyz/assets/img/logo/logowhite.png"
+              src="/assets/jobsLogo.png"
               style={{ width: "200px", objectFit: "cover" }}
+              alt="logo"
             />
           </div>
         </Link>
